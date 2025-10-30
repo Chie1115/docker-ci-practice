@@ -16,3 +16,8 @@ jobs:
       - name: Build Docker image for api
         run: |
           docker build ./api -t shikachie15/my-docker-api:latest
+
+      - name: Run tests in container
+        run: |
+          docker run shikachie15/my-docker-api:latest npm test
+
